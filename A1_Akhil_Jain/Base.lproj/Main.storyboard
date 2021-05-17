@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="A1_Akhil_Jain" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="utH-c5-Iui">
+                                <rect key="frame" x="0.0" y="44" width="414" height="820"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GkS-Tc-ffn">
+                                <rect key="frame" x="330" y="774" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="70" id="2g8-Y4-AeW"/>
+                                    <constraint firstAttribute="width" constant="70" id="AIX-Z6-tIU"/>
+                                    <constraint firstAttribute="height" constant="62" id="LdX-hm-4kj"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="71" id="uLr-m7-NXV"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="pic2"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jjR-Te-K7E">
+                                <rect key="frame" x="330" y="614" width="70" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="72c-BP-8Rc"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="NJb-0j-jb3"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="46" id="Rcd-TF-jl6"/>
+                                    <constraint firstAttribute="width" constant="70" id="ne6-YX-WFy"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="pic1"/>
+                                <connections>
+                                    <action selector="formPolygon:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fhM-Qn-Bny"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="utH-c5-Iui" secondAttribute="trailing" id="2hi-hy-5Iv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="utH-c5-Iui" secondAttribute="bottom" id="5vf-Cq-HjX"/>
+                            <constraint firstItem="utH-c5-Iui" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Crj-2s-OVl"/>
+                            <constraint firstItem="jjR-Te-K7E" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="330" id="Fji-Pl-zkL"/>
+                            <constraint firstItem="GkS-Tc-ffn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="330" id="daa-c1-P3l"/>
+                            <constraint firstItem="jjR-Te-K7E" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="570" id="pqE-Fs-0MA"/>
+                            <constraint firstItem="utH-c5-Iui" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="psX-Jf-d81"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="GkS-Tc-ffn" secondAttribute="bottom" constant="20" id="uJd-ob-uHG"/>
+                            <constraint firstItem="GkS-Tc-ffn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="730" id="ysC-7q-wP5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="dircetionBtn" destination="GkS-Tc-ffn" id="PnD-BS-c7z"/>
+                        <outlet property="map" destination="utH-c5-Iui" id="O7y-GF-MxU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="77.678571428571431"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="pic1" width="782" height="734"/>
+        <image name="pic2" width="432" height="570"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
